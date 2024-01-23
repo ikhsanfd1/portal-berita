@@ -2,7 +2,7 @@ import { Link } from "@inertiajs/react";
 
 const Navbar = ({ user }) => {
     return (
-        <div className="navbar bg-base-100 px-4">
+        <div className="navbar bg-base-100 px-4 border-b">
             <div className="flex-1">
                 <a className="btn btn-ghost text-xl">WowNews</a>
             </div>
@@ -23,7 +23,7 @@ const Navbar = ({ user }) => {
                         <div className="w-10 rounded-full">
                             <img
                                 alt="Tailwind CSS Navbar component"
-                                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                                src="/assets/img/foto_cv_ai_new.png"
                             />
                         </div>
                     </div>

@@ -1,12 +1,11 @@
 const isNews = (news) => {
     return news.map((data, i) => {
+        const randomImageNumber = Math.floor(Math.random() * 100) + 1;
+        const imageUrl = `https://picsum.photos/seed/${randomImageNumber}/800/600`;
         return (
             <div key={i} className="card w-full lg:w-96 bg-base-100 shadow-xl">
                 <figure>
-                    <img
-                        src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                        alt="Shoes"
-                    />
+                    <img src={imageUrl} alt="News" />
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">
