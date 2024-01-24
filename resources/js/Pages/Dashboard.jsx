@@ -86,12 +86,14 @@ export default function Dashboard(props) {
                             }
                             value={category}
                         />
-                        <button
-                            className="btn btn-primary m-1 my-2"
-                            onClick={() => handleSubmit()}
-                        >
-                            Submit
-                        </button>
+                        <div className="flex justify-end">
+                            <button
+                                className="btn btn-primary m-1 my-2"
+                                onClick={() => handleSubmit()}
+                            >
+                                Submit
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div className="mx-7 my-4 flex flex-wrap justify-around">
@@ -114,7 +116,7 @@ export default function Dashboard(props) {
                                             <div className="badge badge-inline">
                                                 {news.category}
                                             </div>
-                                            <div className="badge badge-outline">
+                                            <div className="badge badge-outline hover:bg-primary hover:text-white">
                                                 <Link
                                                     href={route("edit.news")}
                                                     as="button"
@@ -124,7 +126,7 @@ export default function Dashboard(props) {
                                                     Edit
                                                 </Link>
                                             </div>
-                                            <div className="badge badge-outline">
+                                            <div className="badge badge-outline hover:bg-primary hover:text-white">
                                                 <Link
                                                     href={route("delete.news")}
                                                     as="button"
