@@ -40,6 +40,7 @@ class NewsController extends Controller
         $news->description = $request->description;
         $news->category = $request->category;
         $news->author = auth()->user()->email;
+        $news->username = auth()->user()->name;
         $news->save();
         return redirect()->back()->with('message', 'berita berhasil dibuat');
     }
@@ -86,5 +87,12 @@ class NewsController extends Controller
         $news = News::find($request->id);
         $news->delete();
         return redirect()->back()->with('message', 'berita berhasil dihapus');
+    }
+
+    public function search(Request $request)
+    {
+        $query = $request->query('q');
+        $news = News::where('title', 'like', "%{$query}%")->orWhere('description', 'like', "%{$query}%")->get();
+        return response()->json(['news' => $news]);
     }
 }

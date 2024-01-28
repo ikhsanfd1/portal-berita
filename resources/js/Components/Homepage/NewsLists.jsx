@@ -17,7 +17,9 @@ const isNews = (news) => {
                         <div className="badge badge-inline">
                             {data.category}
                         </div>
-                        <div className="badge badge-outline">{data.author}</div>
+                        <div className="badge badge-outline">
+                            {data.username}
+                        </div>
                     </div>
                 </div>
             </div>

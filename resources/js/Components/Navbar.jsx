@@ -1,6 +1,6 @@
 import { Link } from "@inertiajs/react";
 
-const Navbar = ({ user }) => {
+const Navbar = ({ user, setSearchQuery }) => {
     return (
         <div className="navbar bg-base-100 px-4 border-b">
             <div className="flex-1">
@@ -12,6 +12,7 @@ const Navbar = ({ user }) => {
                         type="text"
                         placeholder="Search"
                         className="input input-bordered w-24 md:w-auto"
+                        onChange={(e) => setSearchQuery(e.target.value)}
                     />
                 </div>
                 <div className="dropdown dropdown-end">

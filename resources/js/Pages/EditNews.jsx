@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Head } from "@inertiajs/react";
+import { Head, Link } from "@inertiajs/react";
 import Navbar from "@/Components/Navbar";
 import { Inertia } from "@inertiajs/inertia";
 
@@ -20,6 +20,13 @@ export default function EditNews(props) {
         <div className="min-h-screen bg-slate-50 ">
             <Head title={props.title} />
             <Navbar user={props.auth.user} />
+            <Link
+                className="px-9 mt-3 flex"
+                href={route("my.news")}
+                as="button"
+            >
+                Back
+            </Link>
             <div className="mx-7 my-4 flex flex-wrap justify-around">
                 <div className="card w-full lg:w-96 bg-base-100 shadow-xl m-2">
                     <div className="text-center p-4 text-2xl">Edit Berita</div>

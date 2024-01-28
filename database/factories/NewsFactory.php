@@ -21,6 +21,7 @@ class NewsFactory extends Factory
             'description' => fake()->paragraph(2, true),
             'category' => fake()->text(20),
             'author' => fake()->email(),
+            'username' => fake()->userName(),
         ];
     }
 }
